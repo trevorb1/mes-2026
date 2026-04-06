@@ -5,3 +5,10 @@
 #slidev-goto-dialog:not(.-top-20) .autocomplete-list {
   display: block;
 }
+
+/* Default code block styles. Slides that need different sizing keep a local <style> block. */
+.shiki {
+  font-size: 0.75rem;
+  line-height: 1;
+  border: 1px solid #e5e7eb;
+}
