@@ -1,5 +1,7 @@
 <script setup lang="ts">
-defineProps<{
+import { computed } from 'vue'
+
+const props = defineProps<{
   href: string
   src: string
   alt: string
@@ -12,12 +14,19 @@ defineProps<{
    */
   size?: 'sm' | 'md' | 'lg' | 'xl'
 }>()
+
+const assets = import.meta.glob('../assets/**/*', { eager: true, import: 'default' }) as Record<string, string>
+
+const resolvedSrc = computed(() => {
+  const key = props.src.replace(/^\.?\/assets\//, '../assets/')
+  return assets[key] ?? props.src
+})
 </script>
 
 <template>
   <a :href="href" target="_blank" class="transition-transform hover:scale-110">
     <img
-      :src="src"
+      :src="resolvedSrc"
       :alt="alt"
       class="bg-white border border-gray-100 object-contain"
       :class="{
