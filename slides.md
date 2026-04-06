@@ -1,20 +1,10 @@
 ---
-# try also 'default' to start simple
 theme: apple-basic
-# random image from a curated Unsplash collection by Anthony
-# like them? see https://unsplash.com/collections/94734566/slidev
 background: https://cover.sli.dev
-# some information about your slides (markdown enabled)
 title: PyPSA-USA
 info: Open source energy system optimization model
-# apply UnoCSS classes to the current slide
 class: pt-40
-# https://sli.dev/features/drawing
-drawings:
-  persist: false
-# slide transition: https://sli.dev/guide/animations.html#slide-transitions
-transition: slide-left
-# enable Comark Syntax: https://comark.dev/syntax/markdown
+transition: slide-up
 comark: true
 layout: default
 ---
@@ -24,6 +14,11 @@ layout: default
 ## Open source Energy System Modeling for the United States
 
 <!-- High-resolution data and optimization model energy transition analysis -->
+
+<img 
+  src="/assets/s1/pypsa-logo.png" 
+  class="absolute object-cover opacity-10 -mt-50 pl-125" 
+/>
 
 <div class="pt-8 text-md opacity-60">
     <div>
@@ -43,7 +38,7 @@ Presenter Notes
 -->
 
 ---
-transition: fade-out
+transition: slide-up
 clicks: 4
 ---
 
@@ -120,21 +115,21 @@ level: 2
         <div class="text-2xl">🌍</div>
         <div>
           <div class="font-bold">Emissions</div>
-          <div class="text-xs opacity-60 uppercase tracking-wider">System & Sector Level</div>
+          <div class="text-sm opacity-70">System & Sector Level</div>
         </div>
       </div>
       <div class="flex items-center gap-4">
         <div class="text-2xl">⚡️</div>
         <div>
           <div class="font-bold">Energy Flows</div>
-          <div class="text-xs opacity-60 uppercase tracking-wider">Sankey-ready Data</div>
+          <div class="text-sm opacity-70">Sankey-ready Data</div>
         </div>
       </div>
       <div class="flex items-center gap-4">
         <div class="text-2xl">💰</div>
         <div>
           <div class="font-bold">System Costs</div>
-          <div class="text-xs opacity-60 uppercase tracking-wider">CAPEX & OPEX Analysis</div>
+          <div class="text-sm opacity-70">CAPEX & OPEX Analysis</div>
         </div>
       </div>
     </div>
@@ -154,7 +149,7 @@ transition: slide-up
   <div class="my-auto">
     <div class="text-xl leading-relaxed">
 
-```yaml [config.default.yaml] {all|2|3-4|5,8|7|11,12|13,14|}
+```yaml [config.default.yaml] {0|1,2|1,3-4|1,5,8|1,7|10,11,12|10,13,14|all}
 scenario:
   interconnect: [eastern]
   clusters: [6]
@@ -191,6 +186,7 @@ line-height: 1.2 !important;
 
 ---
 transition: slide-up
+hide: true
 ---
 
 # Renewable Capacity Factors
@@ -215,8 +211,6 @@ transition: slide-up
 ---
 transition: slide-up
 layout: default
-dragPos:
-  square: 56,517,345,345
 ---
 
 # Demand Profiles
@@ -225,7 +219,7 @@ dragPos:
 <div class="grid grid-cols-2 gap-10 h-[440px]">
 
   <div class="flex flex-col justify-top gap-10 h-full p-0 pt-10">
-    <div class="custom-code">
+    <div v-click class="custom-code">
 ```yaml [config.default.yaml] {1,3}
 demand: 
   profile: efs  # not used
@@ -236,7 +230,7 @@ demand:
 ```
 </div>
 
-<div class="flex justify-evenly items-center bg-gray-50 p-6 rounded-2xl border border-gray-10 shadow-sm">
+<div v-click class="flex justify-evenly items-center bg-gray-50 p-6 rounded-2xl border border-gray-10 shadow-sm">
   <a href="https://resstock.nrel.gov/" target="_blank" class="transition-transform hover:scale-110">
     <img src="/assets/s6/resstock.png" class="h-10 rounded bg-white px-3 border border-gray-10 shadow-sm" alt="ResStock" />
   </a>
@@ -247,7 +241,7 @@ demand:
 
 </div>
 
-<div class="flex flex-col justify-between h-full gap-4 -mt-30">
+<div v-click class="flex flex-col justify-between h-full gap-4 -mt-30">
 <div class="p-4 rounded-3xl w-full">
 <img src="/assets/s6/res-profile.png" class="w-full object-contain rounded-xl max-h-[220px]" alt="Residential Load" />
 <!-- <p class="text-center text-[14px] opacity-60 mt-0">Residential Profile</p> -->
@@ -302,7 +296,7 @@ layout: default
 
 <div class="grid grid-cols-[0.75fr_1.25fr] gap-10 h-[460px]">
 
-  <div class="flex flex-col justify-start gap-10 h-full pt-10">
+  <div v-click class="flex flex-col justify-start gap-10 h-full pt-10">
     <div class="custom-code">
 ```yaml [config.default.yaml] {1,3-5}
 demand: 
@@ -326,7 +320,7 @@ demand:
 
 </div>
 
-<div class="flex flex-col justify-center items-center h-full">
+<div v-click class="flex flex-col justify-center items-center h-full">
 <div class="p-4 -mt-30 rounded-3xl w-full max-w-[650px]">
 <img src="/assets/s8/ev-profiles.png" class="w-full rounded-2xl" alt="EV Load Profiles" />
 </div>
@@ -419,7 +413,7 @@ layout: default
 
   <div class="flex flex-col h-full justify-top pl-4 mt-4">
     <h2 class="text-primary font-600 mb-4 border-b border-gray-10 pb-2 flex items-center gap-3 text-xl">
-      Population-based Disaggregation
+      Population-based disaggregation
     </h2>
     <ul class="space-y-6 list-none pl-0">
       <li class="flex items-start gap-4">
@@ -442,7 +436,7 @@ layout: default
       </li>
     </ul>
     <h2 class="text-primary font-600 mb-4 border-b border-gray-10 pb-2 flex items-center gap-3 text-xl">
-      Emissions-based Disaggregation
+      Emissions-based disaggregation
     </h2>
     <ul class="space-y-6 list-none pl-0">
       <li class="flex items-start gap-4">
@@ -475,7 +469,7 @@ layout: default
 
 <div class="grid grid-cols-[0.8fr_1.20fr] gap-10 h-[440px]">
 
-  <div class="flex flex-col justify-top gap-10 h-full p-0 pt-10">
+  <div v-click class="flex flex-col justify-top gap-10 h-full p-0 pt-10">
     <div class="custom-code">
 ```yaml [config.default.yaml] {1,3,6}
 demand: 
@@ -498,7 +492,7 @@ demand:
 
 </div>
 
-<div class="flex flex-col justify-center gap-0 -mt-20">
+<div v-click class="flex flex-col justify-center gap-0 -mt-20">
 <div class="rounded-2xl">
 <img src="/assets/s11/aeo-commercial.png" class="w-full object-contain rounded-xl max-h-[450px]" alt="Industrial Load" />
 </div>
@@ -528,17 +522,16 @@ layout: default
 
   <div class="flex flex-col justify-top gap-10 h-full p-0 pt-10">
     <div class="custom-code">
-```yaml [config.sector.yaml]
+```yaml [config.sector.yaml] {0|1-3|1,4,5|1,4-11|1,4,5,12-15|1,4,5,12,15|all}
 sector:
   heating:
     heat_pump_sink_T: 55.
   service_sector: 
     technologies:
-      # true / false indicates extendable
       space_heating:
         elec_furnace: true
         gas_furnace: true
-        oil_furnace: false
+        oil_furnace: true
         heat_pump: true
         air_con: true
       water_heating: 
@@ -551,12 +544,12 @@ sector:
 </div>
 
 <div class="flex flex-col justify-center gap-0 -mt-20">
-<div class="px-4 py-4 rounded-2xl">
+<div v-click="1" class="px-4 py-4 rounded-2xl">
 <img src="/assets/s12/cop.png" class="w-full object-contain rounded-xl max-h-[280px]" alt="Industrial Load" />
 </div>
-<div class="text-center text-[11px] opacity-40 uppercase tracking-widest mt-2">New England (a) Air-Source Heat Pump and (b) Ground-Source Heat Pump COPs</div>
+<div v-click="1" class="text-center text-[11px] opacity-40 uppercase tracking-widest mt-2">New England (a) Air-Source Heat Pump and <br> (b) Ground-Source Heat Pump COPs</div>
 
-<div class="grid grid-cols-2 gap-20 items-center bg-gray-50 p-6 rounded-2xl border border-gray-100 shadow-sm" mt-10>
+<div v-click="2" class="grid grid-cols-2 gap-20 items-center bg-gray-50 p-6 rounded-2xl border border-gray-100 shadow-sm" mt-10>
 
   <a href="https://www.eia.gov/consumption/residential/" target="_blank" class="flex justify-center transition-transform hover:scale-110">
     <span>→</span> EIA RECS
@@ -592,21 +585,20 @@ layout: default
 
   <div class="flex flex-col justify-top gap-10 h-full p-0 pt-10">
     <div class="custom-code">
-```yaml [config.sector.yaml]
+```yaml [config.sector.yaml] {0|1,2|1,2|1-3|1,2,4|1,2,5|1,2,6-9|all}
 sector:
   transport_sector:
     dynamic_costs: True 
     ev_policy: "ev_policy.csv"
     must_run_evs: True
     modes:
-      vehicle: true
       rail: true
       air: true
       boat: true
 ```
 </div>
 
-<div class="flex flex-row items-center justify-center gap-6">
+<div v-click=2 class="flex flex-row items-center justify-center gap-6">
   <span class="text-[11px] font-bold uppercase tracking-widest opacity-40 text-right max-w-[120px] leading-tight">
     NLR Electrification <br> Future Study
   </span>
@@ -618,7 +610,7 @@ sector:
 
 </div>
 
-<div class="flex flex-col justify-center gap-0 -mt-20">
+<div v-click=2 class="flex flex-col justify-center gap-0 -mt-20">
 <div class="px-4 py-4 rounded-2xl">
 <img src="/assets/s13/transport-res.png" class="w-full object-contain rounded-xl max-h-[320px]" alt="Industrial Load" />
 </div>
@@ -648,26 +640,25 @@ layout: default
 
   <div class="flex flex-col justify-top gap-10 h-full p-0 pt-10">
     <div class="custom-code">
-```yaml [config.sector.yaml]
+```yaml [config.sector.yaml] {0|1,2|1-6|1,2,7|1,2,8|all}
 sector:
   industrial_sector: 
-    dynamic_costs: True
     technologies: 
-      # true / false indicates extendable
       gas_furnace: true
       coal_furnace: true
       heat_pump: true
+    dynamic_costs: True
     min_fossil_generation: 66 # percent
 ```
 </div>
 
 </div>
 
-<div class="flex flex-col justify-center gap-0 -mt-20">
+<div v-click=2 class="flex flex-col justify-center gap-0 -mt-20">
 <div class="px-4 py-4 rounded-2xl">
 <img src="/assets/s14/res.png" class="w-full object-contain rounded-xl max-h-[320px]" alt="Industrial Load" />
 </div>
-<div class="text-center text-[11px] opacity-40 uppercase tracking-widest mt-2">Road transportation technology representation</div>
+<div class="text-center text-[11px] opacity-40 uppercase tracking-widest mt-2">Industry technology representation</div>
 
 </div>
 
@@ -683,11 +674,10 @@ border: 1px solid #e5e7eb !important;
 
 ---
 transition: slide-up
-clicks: 4
 ---
 
 # Technology Representation
-## Natural Gas
+<p class="opacity-50 -mt-4 mb-8 text-lg">Natural Gas</p>
 
 <div class="grid grid-cols-[2fr_1fr] gap-4 h-[400px] mt-10">
 
@@ -698,7 +688,7 @@ clicks: 4
     <img v-click="4" src="/assets/s15/sector-4.png" v-if="$clicks >= 4" class="w-full object-contain max-h-[350px]" />
   </div>
 
-  <div class="flex items-center justify-center -mt-40">
+  <div v-click="5" class="flex items-center justify-center -mt-40">
     <img src="/assets/s15/sources.png" class="w-full object-contain max-h-[350px]" alt="Sources" />
   </div>
 </div>
@@ -716,27 +706,27 @@ layout: default
 
   <div class="flex flex-col justify-top gap-10 h-full p-0 pt-10">
     <div class="custom-code">
-```yaml [config.default.yaml]
+```yaml [config.default.yaml] {0|1,2,3,9,10|1,2,4,9,11|1,2,6,7,9,12,13|1,2,6,7,9,12,13|1,2,8,9,14|1,2,5|all}
 electricity:
   imports:
     enable: true 
     costs: wholesale # wholesale|carrier|float
     co2_emissions: 0.384 # TCO2 / MWh
+    volume_limit: 20 # percentage
+    balancing_period: year # day|week|month|year 
     capacity_limit: true 
-    volume_limit: 20 # percentage 
-    balancing_period: year 
   exports:
     enable: true 
     costs: wholesale 
-    capacity_limit: true 
     volume_limit: 5 
     balancing_period: year 
+    capacity_limit: true 
 ```
 </div>
 
 </div>
 
-<div class="flex flex-col justify-center gap-0 -mt-35">
+<div v-click=4 class="flex flex-col justify-center gap-0 -mt-35">
 <div class="bg-gray-50 px-4 py-4 rounded-2xl border border-gray-100 shadow-sm">
 <img src="/assets/s16/neiso.png" class="w-full object-contain rounded-xl max-h-[320px]" alt="Industrial Load" />
 </div>
@@ -745,6 +735,9 @@ electricity:
 <div class="flex flex-row items-center justify-center gap-6 mt-10">
   <a href="https://www.iso-ne.com/" target="_blank" class="transition-transform hover:scale-110 shrink-0">
     <img src="/assets/s16/ne-logo.png" class="h-16 rounded-lg bg-white px-4 py-2 border border-gray-100 shadow-md" alt="ISO-NE" />
+  </a>
+  <a href="https://catalyst.coop/pudl/" target="_blank" class="transition-transform hover:scale-110 shrink-0">
+    <img src="/assets/s16/pudl.png" class="h-16 rounded-lg bg-white px-4 py-2 border border-gray-100 shadow-md" alt="ISO-NE" />
   </a>
 </div>
 
@@ -772,7 +765,7 @@ layout: default
 
   <div class="flex flex-col justify-top gap-10 h-full p-0 pt-10">
     <div class="custom-code">
-```yaml [config.sector.yaml]
+```yaml [config.sector.yaml]{0|1,2|1,2|1-8|1,2,9,10|1,2,11|1,2,12|1,13-16|all}
 sector:
   natural_gas:
     imports: # percentage
@@ -794,7 +787,7 @@ sector:
 
 </div>
 
-<div class="flex flex-col justify-center gap-0 -mt-35">
+<div v-click=2 class="flex flex-col justify-center gap-0 -mt-35">
 <div class="px-4 py-4 rounded-2xl">
 <img src="/assets/s17/ng_connections.png" class="w-full object-contain rounded-xl max-h-[400px]" alt="Natural Gas Connections" />
 </div>
@@ -824,7 +817,7 @@ layout: two-cols
 
 <div class="custom-code">
 
-```ts
+```ts{0|1-4,8-13}
 .
 └── pypsa-usa/
     ├── workflow/
@@ -858,7 +851,7 @@ Full User Customization
         <div class="text-2xl">🔧</div>
         <div>
           <div class="font-bold text-lg">Modify existing constraints</div>
-          <div class="text-sm opacity-70">Adjust parameters in YAML and CSV files</div>
+          <div class="text-sm opacity-70">Adjust parameters in config files</div>
         </div>
       </div>
       <div class="flex items-start gap-4">
@@ -889,9 +882,9 @@ layout: default
 # Policies
 <p class="opacity-50 -mt-4 mb-8 text-lg">TCT and EV Policy</p>
 
-<div class="mb-10 mt-10">
+<div v-click=1 class="mb-10 mt-10">
 
-```csv [technology_capacity_targets.csv]{1|2|3|4|5|6|7|8}
+```csv [technology_capacity_targets.csv]{0|0|1|1-6|1,7|all}
 name,planning_horizon,region,carrier,min,max
 solar,2030,"ME,MA,VT,NH,CT,RI",solar,,8566
 wind,2030,"ME,MA,VT,NH,CT,RI","onwind, offwind_floating",,4351
@@ -899,13 +892,12 @@ ocgt,2030,"ME,MA,VT,NH,CT,RI",OCGT,,10312
 ccgt,2030,"ME,MA,VT,NH,CT,RI","CCGT, CCGT-95CCS, CCGT-97CCS",,35465
 battery,2030,"ME,MA,VT,NH,CT,RI","4hr_battery_storage, 8hr_battery_storage",,1606
 oil_furnace,2030,"ME,MA,VT,NH,CT,RI","com-total-space-oil-furnace, res-total-space-oil-furnace",,90783
-oil_water,2030,"ME,MA,VT,NH,CT,RI","com-total-water-oil, res-total-water-oil",,2017
 ```
 
 </div>
-<div>
+<div v-click=5>
 
-```csv [ev_policy.csv]{1|2|3|4|5|6|7|8}
+```csv [ev_policy.csv]{0|1|all}
 ,light_duty,med_duty,heavy_duty,bus
 2030,34.18,7.27,6.11,34.2
 
@@ -938,7 +930,7 @@ layout: default
 <div class="grid grid-cols-[1.2fr_0.8fr] gap-10 h-[460px] items-center">
 
   <div class="flex flex-col justify-start gap-6 -mt-15">
-    <div class="large-code">
+    <div v-click=1 class="large-code">
       <span class="text-[11px] uppercase tracking-widest opacity-40 mb-1 block">1. Execute Workflow</span>
 ```bash 
 mamba activate pypsa-usa
@@ -946,7 +938,7 @@ snakemake -j1 --configfile config/config.default.yaml
 ```
 </div>
 
-<div class="large-code">
+<div v-click=3 class="large-code">
   <span class="text-[11px] uppercase tracking-widest opacity-40 mb-1 block">3. Inspect Results</span>
 ```python 
 import pypsa
@@ -957,10 +949,10 @@ n = pypsa.Network("*.nc")
   </div>
 
 
-<div class="flex flex-col justify-center h-full pt-4 -mt-40">
+<div v-click=2 class="flex flex-col justify-center h-full pt-4 -mt-40">
 <div class="tree-code">
       <span class="text-[11px] uppercase tracking-widest opacity-40 mb-1 block">2. Standard PyPSA-USA output structure</span>
-```ts
+```ts{6-23}
 .
 └── pypsa-usa/
     ├── workflow/
@@ -1026,10 +1018,10 @@ layout: default
 
   <div class="flex flex-col justify-top gap-10 h-full p-0 pt-10">
     <div class="custom-code">
-```ts
+```ts{1-4,5,9,10}
 .
 └── pypsa-usa/
-  └── .../
+  └── ...
       └── figures/
           └── system/
               ├── capacity
@@ -1088,16 +1080,16 @@ layout: default
 ---
 
 # Carbon Flows
-## System Level Sankey Charts
+<p class="opacity-50 -mt-4 mb-8 text-lg">System Level Sankey Charts</p>
 
 <div class="grid grid-cols-[0.50fr_1.50fr] gap-10 h-[440px]">
 
   <div class="flex flex-col justify-top gap-10 h-full p-0 pt-10">
     <div class="custom-code">
-```ts
+```ts{1-4,5,9,11}
 .
 └── pypsa-usa/
-  └── .../
+  └── ...
       └── figures/
           └── system/
               ├── capacity
@@ -1136,31 +1128,33 @@ layout: default
 ---
 
 # Production
-## System level production results
+<p class="opacity-50 -mt-4 mb-8 text-lg">System Level Production Results</p>
 
 <div class="grid grid-cols-[0.50fr_1.50fr] gap-10 h-[440px]">
   
   <div class="flex flex-col justify-top gap-10 h-full p-0 pt-10">
     <div class="custom-code">
-```ts
+```ts{1-5,8-12}
 .
 └── pypsa-usa/
-  └── .../
+  └── ...
       └── figures/
           └── system/
-              ├── capacity/
-              ├── emissions/
-              ├── production/
-              ├── sankey/
-              │   ├── energy.html
-              │   └── carbon.html
-              └── natural_gas/
+            ├── capacity
+            ├── emissions
+            ├── production/
+            │   ├── pwr/
+            │   │   └── production_time_series.png
+            │   └── res/
+            │       └── production_time_series.png
+            ├── sankey
+            └── natural_gas
 ```
 </div>
 
 </div>
 
-<div class="flex flex-col h-full justify-center items-center gap-4">
+<div class="flex flex-col h-full items-center gap-4 -mt-10">
 <div class="w-full">
 <img src="/assets/s24/pwr.png" class="w-full h-auto max-h-[200px] object-contain" alt="Power Time Series" />
 </div>
@@ -1177,31 +1171,33 @@ layout: default
 ---
 
 # Capacity
-## System level capacity results
+<p class="opacity-50 -mt-4 mb-8 text-lg">System Level Capacity Results</p>
 
 <div class="grid grid-cols-[0.50fr_1.50fr] gap-10 h-[440px]">
   
   <div class="flex flex-col justify-top gap-10 h-full p-0 pt-10">
     <div class="custom-code">
-```ts
+```ts{1-10}
 .
 └── pypsa-usa/
-  └── .../
+  └── ...
       └── figures/
           └── system/
               ├── capacity/
-              ├── emissions/
-              ├── production/
-              ├── sankey/
-              │   ├── energy.html
-              │   └── carbon.html
-              └── natural_gas/
+              │   ├── pwr/
+              │   │   └── end_use_cap_brownfield.png
+              │   └── res/
+              │       └── end_use_cap_brownfield.png
+              ├── emissions
+              ├── production
+              ├── sankey
+              └── natural_gas
 ```
 </div>
 
 </div>
 
-<div class="flex flex-col h-full justify-center items-center gap-4">
+<div class="flex flex-col h-full justify-center items-center gap-4 -mt-15">
 <div class="w-full">
 <img src="/assets/s25/pwr.png" class="w-full h-auto max-h-[200px] object-contain" alt="Power Time Series" />
 </div>
@@ -1218,31 +1214,36 @@ layout: default
 ---
 
 # Natural Gas
-## System level natural gas results
+<p class="opacity-50 -mt-4 mb-8 text-lg">System Level Natural Gas Results</p>
 
 <div class="grid grid-cols-[0.50fr_1.50fr] gap-10 h-[440px]">
   
   <div class="flex flex-col justify-top gap-10 h-full p-0 pt-10">
     <div class="custom-code">
-```ts
+```ts{1-5,10,11,12}
 .
 └── pypsa-usa/
-  └── .../
+  └── ...
       └── figures/
           └── system/
-              ├── capacity/
-              ├── emissions/
-              ├── production/
-              ├── sankey/
-              │   ├── energy.html
-              │   └── carbon.html
+              ├── capacity
+              ├── emissions
+              ├── production
+              ├── sankey
               └── natural_gas/
+                  ├── demand.png
+                  ├── domestic_trade.png
+                  ├── international_trade.png
+                  ├── fuel_price.png
+                  ├── linepack.png
+                  ├── processing.png
+                  └── storage.png
 ```
 </div>
 
 </div>
 
-<div class="flex flex-col h-full justify-center items-center gap-4">
+<div class="flex flex-col h-full justify-center items-center gap-4 -mt-20">
 <div class="w-full">
 <img src="/assets/s26/demand.png" class="w-full h-auto max-h-[200px] object-contain" alt="Power Time Series" />
 </div>
@@ -1276,21 +1277,21 @@ level: 2
     </h2>
     <div class="space-y-5 flex-grow">
       <div class="flex items-start gap-4">
-        <div class="text-xl">🛢️</div>
+        <div class="text-xl">💻</div>
         <div>
           <div class="font-bold">PyPSA-USA Sector Setup</div>
           <div class="text-sm opacity-70">Enabled cross-sectoral energy analysis</div>
         </div>
       </div>
       <div class="flex items-start gap-4">
-        <div class="text-xl">🏗️</div>
+        <div class="text-xl">📜</div>
         <div>
           <div class="font-bold">Policy Evaluation</div>
           <div class="text-sm opacity-70">Implemented sector specific policies</div>
         </div>
       </div>
       <div class="flex items-start gap-4">
-        <div class="text-xl">🛑</div>
+        <div class="text-xl">📊</div>
         <div>
           <div class="font-bold">Result Analysis</div>
           <div class="text-sm opacity-70">Viewed auto-generated charts</div>
@@ -1305,26 +1306,36 @@ level: 2
     </h2>
     <div class="space-y-6">
       <div class="flex items-center gap-4">
-        <div class="text-2xl">🌍</div>
+        <div class="text-2xl">⛽</div>
         <div>
           <div class="font-bold">Alternative fuels</div>
-          <div class="text-xs opacity-60 uppercase tracking-wider">Hydrogen, biofuels, etc. supply chains</div>
+          <div class="text-sm opacity-70">Hydrogen, biofuels, etc. supply chains</div>
         </div>
       </div>
       <div class="flex items-center gap-4">
-        <div class="text-2xl">⚡️</div>
+        <div class="text-2xl">🏭</div>
         <div>
           <div class="font-bold">Industrial Sector</div>
-          <div class="text-xs opacity-60 uppercase tracking-wider">Improvments on industrial demand and technology representation</div>
+          <div class="text-sm opacity-70">Improvments on industrial demand and technology representation</div>
         </div>
       </div>
       <div class="flex items-center gap-4">
-        <div class="text-2xl">💰</div>
+        <div class="text-2xl">✈️</div>
         <div>
           <div class="font-bold">Non-road vehicle transport</div>
-          <div class="text-xs opacity-60 uppercase tracking-wider">Air, train, and marine decarbonization</div>
+          <div class="text-sm opacity-70">Air, train, and marine decarbonization</div>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+---
+layout: center
+class: "text-center"
+transition: slide-up
+---
+
+# Thank You! 
+
+[GitHub](https://github.com/PyPSA/pypsa-usa/tree/master) / [Documentation](https://pypsa-usa.readthedocs.io/en/latest/)

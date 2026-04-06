@@ -1,6 +1,6 @@
 # PyPSA-USA Sector Presentation for Macro Energy System
 
-This repository holds the [PyPSA-USA](https://github.com/pypsa/pypsa-usa) presentation for Macro Energy System's 2026 April Meeting. The presentation is created openly using [Slidev](https://github.com/slidevjs/slidev). 
+This repository holds the [PyPSA-USA](https://github.com/pypsa/pypsa-usa) presentation for Macro Energy System's 2026 April Meeting. The presentation is created using [Slidev](https://github.com/slidevjs/slidev). 
 
 ## To download the presentation
 
@@ -18,3 +18,6 @@ To start the slide show:
 
 Edit the [slides.md](./slides.md) to see the changes.
 
+## AI Use
+
+All content is original and created using PyPSA-USA. [Gemini](https://gemini.google.com/app) was used to help format the presentation. 
