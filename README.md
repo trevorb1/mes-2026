@@ -2,9 +2,9 @@
 
 This repository holds the [PyPSA-USA](https://github.com/pypsa/pypsa-usa) presentation for Macro Energy System's 2026 April Meeting. The presentation is created using [Slidev](https://github.com/slidevjs/slidev). 
 
-## To download the presentation
+## To view the presentation
 
-View `presentation.pdf`
+Go to [https://trevorb1.github.io/mes-2026/](https://trevorb1.github.io/mes-2026/)
 
 ## To build the presentation
 
