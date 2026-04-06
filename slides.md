@@ -16,7 +16,7 @@ layout: default
 <!-- High-resolution data and optimization model energy transition analysis -->
 
 <img
-  src="/assets/s1/pypsa-logo.png"
+  src="./assets/s1/pypsa-logo.png"
   class="absolute object-cover opacity-10 -mt-50 pl-125"
 />
 
@@ -29,8 +29,8 @@ layout: default
 </div>
 
 <div class="absolute right-0 bottom-0 flex items-center gap-4 p-4">
-  <img src="/assets/s1/sfu.png" alt="Stanford" style="height: 40px;" />
-  <img src="/assets/s1/stanford.png" alt="SFU" style="height: 40px;" />
+  <img src="./assets/s1/sfu.png" alt="Stanford" style="height: 40px;" />
+  <img src="./assets/s1/stanford.png" alt="SFU" style="height: 40px;" />
 </div>
 
 <!--
@@ -45,11 +45,11 @@ clicks: 4
 # Sector Coupling
 
 <div class="relative mt-10 h-80 w-115 mx-auto">
-  <img v-if="$clicks === 0" src="/assets/s2/sector-1.png" class="absolute top-0 left-0 w-full" />
-  <img v-if="$clicks === 1" src="/assets/s2/sector-2.png" class="absolute top-0 left-0 w-full" />
-  <img v-if="$clicks === 2" src="/assets/s2/sector-3.png" class="absolute top-0 left-0 w-full" />
-  <img v-if="$clicks === 3" src="/assets/s2/sector-4.png" class="absolute top-0 left-0 w-full" />
-  <img v-if="$clicks >= 4" src="/assets/s2/sector-5.png" class="absolute top-0 left-0 w-full" />
+  <img v-if="$clicks === 0" src="./assets/s2/sector-1.png" class="absolute top-0 left-0 w-full" />
+  <img v-if="$clicks === 1" src="./assets/s2/sector-2.png" class="absolute top-0 left-0 w-full" />
+  <img v-if="$clicks === 2" src="./assets/s2/sector-3.png" class="absolute top-0 left-0 w-full" />
+  <img v-if="$clicks === 3" src="./assets/s2/sector-4.png" class="absolute top-0 left-0 w-full" />
+  <img v-if="$clicks >= 4" src="./assets/s2/sector-5.png" class="absolute top-0 left-0 w-full" />
 </div>
 
 <p v-if="$clicks >= 4" v-after class="mt-4 text-center text-gray-500">
@@ -136,7 +136,7 @@ model_topology:
   </div>
 
   <div class="flex justify-center -mt-20">
-    <img src="/assets/s4/new-england.png" class="w-full rounded-2xl shadow-lg border border-gray-100" />
+    <img src="./assets/s4/new-england.png" class="w-full rounded-2xl shadow-lg border border-gray-100" />
   </div>
 
 </div>
@@ -160,13 +160,13 @@ hide: true
 
   <div class="flex flex-col items-center">
     <div class="p-4 rounded-3xl w-full">
-      <img src="/assets/s5/solar_cf.png" class="w-full rounded-2xl" />
+      <img src="./assets/s5/solar_cf.png" class="w-full rounded-2xl" />
     </div>
   </div>
 
   <div class="flex flex-col items-center">
     <div class="p-4 rounded-3xl w-full">
-      <img src="/assets/s5/wind_cf.png" class="w-full rounded-2xl" />
+      <img src="./assets/s5/wind_cf.png" class="w-full rounded-2xl" />
     </div>
   </div>
 
@@ -196,13 +196,13 @@ demand:
 
 </div>
     <div v-click class="flex justify-evenly items-center bg-gray-50 p-6 rounded-2xl border border-gray-10 shadow-sm">
-      <LogoLink href="https://resstock.nrel.gov/" src="/assets/s6/resstock.png" alt="ResStock" />
-      <LogoLink href="https://comstock.nrel.gov/" src="/assets/s6/comstock.png" alt="ComStock" />
+      <LogoLink href="https://resstock.nrel.gov/" src="./assets/s6/resstock.png" alt="ResStock" />
+      <LogoLink href="https://comstock.nrel.gov/" src="./assets/s6/comstock.png" alt="ComStock" />
     </div>
   </div>
   <div v-click class="flex flex-col justify-between h-full gap-0 -mt-32">
     <ImageCaption
-      src="/assets/s6/res-profile.png"
+      src="./assets/s6/res-profile.png"
       alt="Residential Load"
       caption="Massachusetts Residential Profile"
       wrapper-class="p-4 rounded-3xl w-full"
@@ -210,7 +210,7 @@ demand:
       caption-class="-mt-8"
     />
     <ImageCaption
-      src="/assets/s6/com-profile.png"
+      src="./assets/s6/com-profile.png"
       alt="Commercial Load"
       caption="Massachusetts Commercial Profile"
       wrapper-class="p-4 rounded-3xl w-full"
@@ -231,7 +231,7 @@ hide: true
 <p class="opacity-50 -mt-4 mb-8 text-lg">Service Sector Load Profiles</p>
 <div class="flex flex-col items-center justify-center h-[400px]">
   <ImageCaption
-    src="/assets/s7/service-load.png"
+    src="./assets/s7/service-load.png"
     alt="Service Sector Load"
     caption="Service sector load in New England"
     wrapper-class="p-4 rounded-3xl max-w-[700px]"
@@ -266,12 +266,12 @@ demand:
       <span class="text-[11px] font-bold uppercase tracking-widest opacity-40 mb-3 max-w-[200px]">
         NLR Electrification Future Study
       </span>
-      <LogoLink href="https://zenodo.org/records/15295016" src="/assets/s8/efs.png" alt="NLR EFS" size="xl" />
+      <LogoLink href="https://zenodo.org/records/15295016" src="./assets/s8/efs.png" alt="NLR EFS" size="xl" />
     </div>
   </div>
   <div v-click class="flex flex-col justify-center items-center h-full">
     <ImageCaption
-      src="/assets/s8/ev-profiles.png"
+      src="./assets/s8/ev-profiles.png"
       alt="EV Load Profiles"
       wrapper-class="p-4 -mt-30 rounded-3xl w-full max-w-[650px]"
       img-class="rounded-2xl"
@@ -317,14 +317,14 @@ demand:
 
 </div>
     <div class="grid grid-cols-3 gap-4 items-center bg-gray-50 p-6 rounded-2xl border border-gray-100 shadow-sm">
-      <LogoLink href="https://loadshape.epri.com/enduse" src="/assets/s9/epri.png" alt="EPRI" size="sm" />
-      <LogoLink href="https://www.eia.gov/consumption/manufacturing/" src="/assets/s9/eia.png" alt="EIA" size="sm" />
-      <LogoLink href="https://data.nlr.gov/submissions/97" src="/assets/s9/nlr.png" alt="NLR" size="sm" />
+      <LogoLink href="https://loadshape.epri.com/enduse" src="./assets/s9/epri.png" alt="EPRI" size="sm" />
+      <LogoLink href="https://www.eia.gov/consumption/manufacturing/" src="./assets/s9/eia.png" alt="EIA" size="sm" />
+      <LogoLink href="https://data.nlr.gov/submissions/97" src="./assets/s9/nlr.png" alt="NLR" size="sm" />
     </div>
   </div>
   <div class="flex flex-col justify-center gap-0 -mt-20">
     <ImageCaption
-      src="/assets/s9/load.png"
+      src="./assets/s9/load.png"
       alt="Industrial Load"
       caption="Massachusetts Industrial Profile"
       img-class="object-contain rounded-xl max-h-[320px]"
@@ -381,7 +381,7 @@ layout: default
 
   <div class="flex flex-col items-center justify-center">
     <ImageCaption
-      src="/assets/s10/urbanization.png"
+      src="./assets/s10/urbanization.png"
       alt="Urbanization Map"
       caption="New England urbanization rates"
       wrapper-class="p-3 rounded-3xl -mt-15"
@@ -419,12 +419,12 @@ demand:
       <span class="text-[11px] font-bold uppercase tracking-widest opacity-40 mb-3 max-w-[200px]">
         Annual Energy Outlook
       </span>
-      <LogoLink href="https://www.eia.gov/outlooks/aeo/" src="/assets/s9/eia.png" alt="EIA" size="xl" />
+      <LogoLink href="https://www.eia.gov/outlooks/aeo/" src="./assets/s9/eia.png" alt="EIA" size="xl" />
     </div>
   </div>
   <div v-click class="flex flex-col justify-center gap-0 -mt-20">
     <ImageCaption
-      src="/assets/s11/aeo-commercial.png"
+      src="./assets/s11/aeo-commercial.png"
       alt="AEO Commercial Energy Growth"
       caption="Annual Energy Outlook Commerical Energy Growth"
       wrapper-class="rounded-2xl"
@@ -470,7 +470,7 @@ sector:
   <div class="flex flex-col justify-center gap-0 -mt-20">
     <div v-click="1">
       <ImageCaption
-        src="/assets/s12/cop.png"
+        src="./assets/s12/cop.png"
         alt="Heat Pump COPs"
         wrapper-class="px-4 py-4 rounded-2xl"
         img-class="object-contain rounded-xl max-h-[280px]"
@@ -519,12 +519,12 @@ sector:
       <span class="text-[11px] font-bold uppercase tracking-widest opacity-40 text-right max-w-[120px] leading-tight">
         NLR Electrification <br> Future Study
       </span>
-      <LogoLink href="https://zenodo.org/records/15295016" src="/assets/s8/efs.png" alt="NLR EFS" size="lg" />
+      <LogoLink href="https://zenodo.org/records/15295016" src="./assets/s8/efs.png" alt="NLR EFS" size="lg" />
     </div>
   </div>
   <div v-click=2 class="flex flex-col justify-center gap-0 -mt-20">
     <ImageCaption
-      src="/assets/s13/transport-res.png"
+      src="./assets/s13/transport-res.png"
       alt="Road Transportation Technology Representation"
       caption="Road transportation technology representation"
       img-class="object-contain rounded-xl max-h-[320px]"
@@ -560,7 +560,7 @@ sector:
   </div>
   <div v-click=2 class="flex flex-col justify-center gap-0 -mt-20">
     <ImageCaption
-      src="/assets/s14/res.png"
+      src="./assets/s14/res.png"
       alt="Industry Technology Representation"
       caption="Industry technology representation"
       img-class="object-contain rounded-xl max-h-[320px]"
@@ -578,14 +578,14 @@ transition: slide-up
 
 <div class="grid grid-cols-[2fr_1fr] gap-4 h-[400px] mt-10">
   <div class="flex items-center justify-center relative">
-    <img v-click="1" src="/assets/s15/sector-1.png" v-if="$clicks === 1" class="w-full object-contain max-h-[350px]" />
-    <img v-click="2" src="/assets/s15/sector-2.png" v-if="$clicks === 2" class="w-full object-contain max-h-[350px]" />
-    <img v-click="3" src="/assets/s15/sector-3.png" v-if="$clicks === 3" class="w-full object-contain max-h-[350px]" />
-    <img v-click="4" src="/assets/s15/sector-4.png" v-if="$clicks >= 4" class="w-full object-contain max-h-[350px]" />
+    <img v-click="1" src="./assets/s15/sector-1.png" v-if="$clicks === 1" class="w-full object-contain max-h-[350px]" />
+    <img v-click="2" src="./assets/s15/sector-2.png" v-if="$clicks === 2" class="w-full object-contain max-h-[350px]" />
+    <img v-click="3" src="./assets/s15/sector-3.png" v-if="$clicks === 3" class="w-full object-contain max-h-[350px]" />
+    <img v-click="4" src="./assets/s15/sector-4.png" v-if="$clicks >= 4" class="w-full object-contain max-h-[350px]" />
   </div>
 
   <div v-click="5" class="flex items-center justify-center -mt-40">
-    <img src="/assets/s15/sources.png" class="w-full object-contain max-h-[350px]" alt="Sources" />
+    <img src="./assets/s15/sources.png" class="w-full object-contain max-h-[350px]" alt="Sources" />
   </div>
 
 </div>
@@ -624,12 +624,12 @@ electricity:
   </div>
   <div v-click=4 class="flex flex-col justify-center gap-0 -mt-35">
     <div class="bg-gray-50 px-4 py-4 rounded-2xl border border-gray-100 shadow-sm">
-      <img src="/assets/s16/neiso.png" class="w-full object-contain rounded-xl max-h-[320px]" alt="New England ISO Energy Mix" />
+      <img src="./assets/s16/neiso.png" class="w-full object-contain rounded-xl max-h-[320px]" alt="New England ISO Energy Mix" />
     </div>
     <div class="text-center text-[11px] opacity-40 uppercase tracking-widest mt-2">New England ISO Energy Mix</div>
     <div class="flex flex-row items-center justify-center gap-6 mt-10">
-      <LogoLink href="https://www.iso-ne.com/" src="/assets/s16/ne-logo.png" alt="ISO-NE" size="lg" />
-      <LogoLink href="https://catalyst.coop/pudl/" src="/assets/s16/pudl.png" alt="PUDL" size="lg" />
+      <LogoLink href="https://www.iso-ne.com/" src="./assets/s16/ne-logo.png" alt="ISO-NE" size="lg" />
+      <LogoLink href="https://catalyst.coop/pudl/" src="./assets/s16/pudl.png" alt="PUDL" size="lg" />
     </div>
   </div>
 
@@ -671,7 +671,7 @@ sector:
   </div>
   <div v-click=2 class="flex flex-col justify-center gap-0 -mt-35">
     <ImageCaption
-      src="/assets/s17/ng_connections.png"
+      src="./assets/s17/ng_connections.png"
       alt="Natural Gas Connections"
       caption="New England Natural Gas Pipeline COnnections"
       img-class="object-contain rounded-xl max-h-[400px]"
@@ -890,7 +890,7 @@ layout: default
   </div>
   <div class="flex flex-col justify-center gap-0 -mt-35">
     <ImageCaption
-      src="/assets/s21/sankey.png"
+      src="./assets/s21/sankey.png"
       alt="Energy Flows"
       caption="Energy Flows from PyPSA-USA"
       img-class="object-contain rounded-xl max-h-[400px]"
@@ -910,13 +910,13 @@ layout: two-cols
 ::left::
 
 <div class="flex flex-col gap-4 justify-center h-full pr-2 -mt-10">
-  <img src="/assets/s22/eia-sankey.png" class="w-full object-contain max-h-[300px]" alt="EIA Sankey" />
+  <img src="./assets/s22/eia-sankey.png" class="w-full object-contain max-h-[300px]" alt="EIA Sankey" />
 </div>
 
 ::right::
 
 <div class="flex flex-col gap-4 justify-center h-full pl-2 mt-10">
-  <img src="/assets/s22/lbln-sankey.png" class="w-full object-contain max-h-[300px]" alt="LBNL Sankey" />
+  <img src="./assets/s22/lbln-sankey.png" class="w-full object-contain max-h-[300px]" alt="LBNL Sankey" />
 </div>
 
 ---
@@ -951,7 +951,7 @@ layout: default
   </div>
   <div class="flex flex-col justify-center gap-0 -mt-35">
     <ImageCaption
-      src="/assets/s23/sankey.png"
+      src="./assets/s23/sankey.png"
       alt="Carbon Flows"
       caption="Carbon Flows from PyPSA-USA"
       img-class="object-contain rounded-xl max-h-[400px]"
@@ -992,10 +992,10 @@ layout: default
   </div>
   <div class="flex flex-col h-full items-center gap-4 -mt-10">
     <div class="w-full">
-      <img src="/assets/s24/pwr.png" class="w-full h-auto max-h-[200px] object-contain" alt="Power Time Series" />
+      <img src="./assets/s24/pwr.png" class="w-full h-auto max-h-[200px] object-contain" alt="Power Time Series" />
     </div>
     <div class="w-full">
-      <img src="/assets/s24/res.png" class="w-full h-auto max-h-[200px] object-contain" alt="Residential Time Series" />
+      <img src="./assets/s24/res.png" class="w-full h-auto max-h-[200px] object-contain" alt="Residential Time Series" />
     </div>
   </div>
 
@@ -1034,10 +1034,10 @@ layout: default
   </div>
   <div class="flex flex-col h-full justify-center items-center gap-4 -mt-15">
     <div class="w-full">
-      <img src="/assets/s25/pwr.png" class="w-full h-auto max-h-[200px] object-contain" alt="Power Time Series" />
+      <img src="./assets/s25/pwr.png" class="w-full h-auto max-h-[200px] object-contain" alt="Power Time Series" />
     </div>
     <div class="w-full">
-      <img src="/assets/s25/res.png" class="w-full h-auto max-h-[200px] object-contain" alt="Residential Time Series" />
+      <img src="./assets/s25/res.png" class="w-full h-auto max-h-[200px] object-contain" alt="Residential Time Series" />
     </div>
   </div>
 
@@ -1079,10 +1079,10 @@ layout: default
   </div>
   <div class="flex flex-col h-full justify-center items-center gap-4 -mt-20">
     <div class="w-full">
-      <img src="/assets/s26/demand.png" class="w-full h-auto max-h-[200px] object-contain" alt="NG Demand" />
+      <img src="./assets/s26/demand.png" class="w-full h-auto max-h-[200px] object-contain" alt="NG Demand" />
     </div>
     <div class="w-full">
-      <img src="/assets/s26/domestic_trade.png" class="w-full h-auto max-h-[200px] object-contain" alt="NG Domestic Trade" />
+      <img src="./assets/s26/domestic_trade.png" class="w-full h-auto max-h-[200px] object-contain" alt="NG Domestic Trade" />
     </div>
   </div>
 
