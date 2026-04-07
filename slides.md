@@ -150,7 +150,7 @@ model_topology:
 
 ---
 transition: slide-up
-hide: true
+hide: false
 ---
 
 # Renewable Capacity Factors
@@ -224,7 +224,7 @@ demand:
 ---
 transition: slide-up
 layout: default
-hide: true
+hide: false
 ---
 
 # Demand Profiles
